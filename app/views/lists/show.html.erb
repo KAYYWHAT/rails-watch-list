@@ -1,25 +1,11 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://static.vecteezy.com/system/resources/thumbnails/030/347/569/small_2x/ai-generated-image-of-delicious-popcorn-on-a-transparent-background-free-png.png" %>
-    <% end %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item active">
-          <%= link_to "My List", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "New List", "#", class: "nav-link" %>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.redd.it/dj4ostj229gb1.png);">
   <div class="container">
-    <h1><strong>sssssss</strong></H1>
+    <h1><strong><%=@list.name%></strong></H1>
+    <% if @list.photo.attached? %>
+  <%= cl_image_tag @list.photo.key %>
+<% else %>
+  <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>
+<% end %>
   </div>
 </div>
