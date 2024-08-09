@@ -5,3 +5,8 @@
 // app/assets/config/manifest.js
 //= link popper.js
 //= link bootstrap.min.js
+import "bootstrap"
+import "@popperjs/core"
+// app/assets/config/manifest.js
+//= link popper.js
+//= link bootstrap.min.js
