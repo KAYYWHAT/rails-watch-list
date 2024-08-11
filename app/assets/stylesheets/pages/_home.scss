@@ -1,18 +1,11 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: #D90404;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 50px;
+  background: #ba1a1a;
 }
 
 .banner {
+  background-color: #000000;
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -29,10 +22,29 @@
 
 .banner h1 {
   margin: 0;
-  color: #0487D9;
+  color: #ba1a1a;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+}
+
+.banner h2 {
+  margin: 0;
+  color: #bebebe;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title h2 {
+  margin: 0;
+  color: #bebebe;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cards {
@@ -59,42 +71,6 @@
   box-sizing: border-box;
 }
 
-
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
 .btn-gradient {
   color: white;
   padding: 8px 24px;
@@ -102,13 +78,13 @@
   display: flex;
   position: center;
   font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: linear-gradient(#ba1a1a, #e72121);
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  border: 1px solid #901414;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#0487D9, #0F67DA);
+  background: linear-gradient(#ba1a1a, #fb0c0c);
   color: white;
 }
 
@@ -116,7 +92,6 @@
   border: none; /* Remove card border */
   border-radius: 0.25rem; /* Optional border radius */
 }
-
 
 .card-body {
   background: rgba(0,0,0,0.4); /* Semi-transparent background */
@@ -134,19 +109,51 @@
 .card-link {
   color: #D90404; /* Red color matching the navbar */
   text-decoration: none; /* Remove underline */
-  font-size: 1.25rem; /* Adjust font size if needed */
+  font-size: 24px; /* Adjust font size if needed */
 }
 
 .card-link:hover {
   text-decoration: underline; /* Optionally add underline on hover */
 }
 
-body {
-  background-image: url('https://i.pinimg.com/originals/07/5e/b7/075eb74eca4cb75163d83e77b743f998.gif'); /* Adjust the image path */
-  background-size: cover; /* Ensures the image covers the entire page */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling */
-  margin: 0; /* Removes default margin */
-  font-family: Arial, sans-serif; /* Optional: Set default font */
-  color: #333; /* Optional: Set default text color */
+.container {
+  height: 200px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  background-color: #000000;
+}
+
+/* Container for the list of movies */
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between cards */
+}
+
+/* Styling for each movie card */
+.movie-card {
+  background: rgba(0,0,0,0.6); /* Semi-transparent background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow for depth */
+  padding: 16px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  width: 200px; /* Fixed width for cards */
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card p {
+  font-size: 16px;
+}
+/* Styling for movie poster image */
+.movie-poster {
+  width: 100%; /* Make the image fill the card width */
+  border-radius: 4px; /* Rounded corners for the image */
+  margin-bottom: 8px; /* Space between image and text */
 }

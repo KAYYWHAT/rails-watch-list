@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 require 'open-uri'
-Movie.destroy_all
+
 # List.destroy_all
 
 # the Le Wagon copy of the API

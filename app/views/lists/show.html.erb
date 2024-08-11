@@ -1,11 +1,25 @@
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.redd.it/dj4ostj229gb1.png);">
-  <div class="container">
-    <h1><strong><%=@list.name%></strong></H1>
-    <% if @list.photo.attached? %>
-  <%= cl_image_tag @list.photo.key %>
-<% else %>
-  <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>
-<% end %>
+<body class="background">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/7991436/pexels-photo-7991436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Movies</h1>
+          <% if @movies.present? %>
+            <div class="movies-list">
+              <% @movies.each do |movie| %>
+                <div class="movie-card">
+                  <%= image_tag movie.poster_url, alt: movie.title, class: "movie-poster" %>
+                  <h2><strong><%= movie.title %></strong></h2>
+                  <p>Rating: <%= movie.rating %></p>
+                  <p><%= movie.overview %></p>
+                </div>
+              <% end %>
+            </div>
+          <% else %>
+            <p>No movies found.</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</body>

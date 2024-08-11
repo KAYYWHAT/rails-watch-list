@@ -1,10 +1,12 @@
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.redd.it/dj4ostj229gb1.png);">
+<body class="background">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/7991436/pexels-photo-7991436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);">
   <div class="container">
     <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
+
   </div>
 </div>
+</body>
